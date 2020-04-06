@@ -61,7 +61,7 @@ public class KnapsackSolution {
         this.score = score;
     }
 
-/*
+
     public KnapsackConstraintConfiguration getConstraintConfiguration() {
         return constraintConfiguration;
     }
@@ -69,7 +69,7 @@ public class KnapsackSolution {
     public void setConstraintConfiguration(KnapsackConstraintConfiguration constraintConfiguration) {
         this.constraintConfiguration = constraintConfiguration;
     }
-*/
+
     
 
 }
