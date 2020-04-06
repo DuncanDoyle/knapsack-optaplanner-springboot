@@ -1,0 +1,5 @@
+<solver>
+    <scoreDirectorFactory>
+        <scoreDrl>com/redhat/knapsackoptaplanner/solver/constraints.drl</scoreDrl>
+    </scoreDirectorFactory>
+</solver>

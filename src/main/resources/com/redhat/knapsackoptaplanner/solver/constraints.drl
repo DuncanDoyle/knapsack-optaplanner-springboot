@@ -1,0 +1,31 @@
+package com.redhat.knapsackoptaplanner.solver;
+
+import org.optaplanner.core.api.score.buildin.hardsoft.HardSoftScoreHolder;
+import com.redhat.knapsackoptaplanner.domain.Ingot;
+import com.redhat.knapsackoptaplanner.domain.Knapsack;
+
+global HardSoftScoreHolder scoreHolder;
+
+rule "Weight"
+when
+    Knapsack($maxWeight: maxWeight)
+    accumulate(
+        Ingot(selected == true, $weight: weight);
+        $totalWeight : sum($weight);
+        $totalWeight > $maxWeight
+    )
+    Ingot(selected == true)
+    
+then
+    //scoreHolder.penalize(kcontext, $maxWeight - $totalWeight);
+    scoreHolder.addHardConstraintMatch(kcontext, $maxWeight - $totalWeight);
+end
+
+
+rule "Max Value"
+when
+    Ingot(selected == true, $value: value)
+then
+    //scoreHolder.reward(kcontext, $value);
+    scoreHolder.addSoftConstraintMatch(kcontext, $value);
+end
