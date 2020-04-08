@@ -17,8 +17,7 @@ when
     Ingot(selected == true)
     
 then
-    scoreHolder.penalize(kcontext, $maxWeight - $totalWeight);
-    //scoreHolder.addHardConstraintMatch(kcontext, $maxWeight - $totalWeight);
+    scoreHolder.penalize(kcontext, $totalWeight - $maxWeight);
 end
 
 
@@ -27,5 +26,4 @@ when
     Ingot(selected == true, $value: value)
 then
     scoreHolder.reward(kcontext, $value);
-    //scoreHolder.addSoftConstraintMatch(kcontext, $value);
 end
