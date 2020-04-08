@@ -29,7 +29,7 @@ public class KnapsackSolution {
     }
 
     @ConstraintConfigurationProvider
-    private KnapsackConstraintConfiguration constraintConfiguration;
+    private KnapsackConstraintConfiguration constraintConfiguration = new KnapsackConstraintConfiguration();
 
     @PlanningScore
     private HardSoftScore score;
@@ -69,7 +69,5 @@ public class KnapsackSolution {
     public void setConstraintConfiguration(KnapsackConstraintConfiguration constraintConfiguration) {
         this.constraintConfiguration = constraintConfiguration;
     }
-
-    
 
 }

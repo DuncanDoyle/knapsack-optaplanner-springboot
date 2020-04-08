@@ -6,7 +6,7 @@ import com.redhat.knapsackoptaplanner.domain.Knapsack;
 
 global HardSoftScoreHolder scoreHolder;
 
-rule "Weight"
+rule "Max Weight"
 when
     Knapsack($maxWeight: maxWeight)
     accumulate(
@@ -17,8 +17,8 @@ when
     Ingot(selected == true)
     
 then
-    //scoreHolder.penalize(kcontext, $maxWeight - $totalWeight);
-    scoreHolder.addHardConstraintMatch(kcontext, $maxWeight - $totalWeight);
+    scoreHolder.penalize(kcontext, $maxWeight - $totalWeight);
+    //scoreHolder.addHardConstraintMatch(kcontext, $maxWeight - $totalWeight);
 end
 
 
@@ -26,6 +26,6 @@ rule "Max Value"
 when
     Ingot(selected == true, $value: value)
 then
-    //scoreHolder.reward(kcontext, $value);
-    scoreHolder.addSoftConstraintMatch(kcontext, $value);
+    scoreHolder.reward(kcontext, $value);
+    //scoreHolder.addSoftConstraintMatch(kcontext, $value);
 end

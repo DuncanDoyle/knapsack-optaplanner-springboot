@@ -2,4 +2,15 @@
     <scoreDirectorFactory>
         <scoreDrl>com/redhat/knapsackoptaplanner/solver/constraints.drl</scoreDrl>
     </scoreDirectorFactory>
+  <constructionHeuristic/>
+  <localSearch>
+    <unionMoveSelector>
+      <changeMoveSelector/>
+      <swapMoveSelector/>
+      <!-- To escape the local optimum in this knapsack variant, add pillar swap moves to swap 2 sets of states. -->
+      <pillarSwapMoveSelector>
+        <subPillarType>ALL</subPillarType>
+      </pillarSwapMoveSelector>
+    </unionMoveSelector>
+  </localSearch>
 </solver>

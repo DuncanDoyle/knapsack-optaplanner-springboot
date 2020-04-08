@@ -7,7 +7,7 @@ import org.optaplanner.core.api.score.buildin.hardsoft.HardSoftScore;
 @ConstraintConfiguration(constraintPackage = "com.redhat.knapsackoptaplanner.solver")
 public class KnapsackConstraintConfiguration {
 
-    @ConstraintWeight("Weight")
+    @ConstraintWeight("Max Weight")
     public HardSoftScore weight= HardSoftScore.ofHard(1);
 
     @ConstraintWeight("Max Value")
