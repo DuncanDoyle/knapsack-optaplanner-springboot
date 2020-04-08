@@ -7,6 +7,7 @@ The knapsack problem is a problem in combinatoral optimization: given a knapsack
 (image source: https://commons.wikimedia.org/wiki/File:Knapsack.svg , license: https://creativecommons.org/licenses/by-sa/2.5/deed.en)
 
 
+In this example, we will be placing _ingots_ of different weights and values in our knapsack. OptaPlanner will select those ingots that together don't overload the knapsack and of which the sum of their values is as high as possible.
 
 ## Solving Knapsack with OptaPlanner
 
@@ -24,7 +25,7 @@ This repository contains a working solution for the knapsack problem in OptaPlan
 - `application.properties`: Spring Boot configuration file in which, in this case, we set the maximum time the OptaPlanner `Solver` will run to 10 minutes.
 
 ## Running the application
-The project is a simple Maven project, you can build it executing the following command in the project's root directory: `mvn clean install`.
+The project is a simple Maven project, you can build it executing the following command in the project's root directory: `mvn clean install`
 
 This will compile and package the project and run a number of simple tests. It will create a runnable JAR file in the `target` directory with the name: `knapsack-optaplanner-springboot-0.0.1-SNAPSHOT.jar`
 
