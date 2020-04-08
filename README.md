@@ -2,7 +2,7 @@
 
 The knapsack problem is a problem in combinatoral optimization: given a knapsack with a given weight, and a set of items with a certain weight and value, determine the combination of items to include in the knapsack in such a way that maximizes the value.
 
-[<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Knapsack.svg/500px-Knapsack.svg.png">](Knapsack problem)
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Knapsack.svg/500px-Knapsack.svg.png">
 
 (image source: https://commons.wikimedia.org/wiki/File:Knapsack.svg , license: https://creativecommons.org/licenses/by-sa/2.5/deed.en)
 
